@@ -29,8 +29,8 @@ app.use(cors())
 // });
 // for testing
 app.get("/", async (req, res) => {
-    res.send("hello browser from SERVER index.js")// in the Browser
-    console.log("hello terminal from SERVER index.js")// in the TERMINAL
+    res.send("hello browser from SERVER Auth-2 index.js")// in the Browser
+    console.log("hello terminal from SERVER Auth-2 index.js")// in the TERMINAL
 })
 // for testing, will be displayed in the TERMINAL below
 app.listen(process.env.PORT, () => {
