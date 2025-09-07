@@ -29,7 +29,7 @@ app.use(cors())
 // });
 // for testing
 app.get("/", async (req, res) => {
-    res.send("hello browser from SERVER Auth-45454545454545 index.js")// in the Browser
+    res.send("hello browser from SERVER, Auth backend works index.js")// in the Browser
     console.log("hello terminal from SERVER Auth-2 index.js")// in the TERMINAL
 })
 // for testing, will be displayed in the TERMINAL below
