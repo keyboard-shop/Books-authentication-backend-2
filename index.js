@@ -57,9 +57,11 @@ app.get("/protect2", requireAuth(), (req, res) => {
 
 
 
-app.use(cors())
+//app.use(cors())
 // app.use(cors({ origin: ['http://localhost:3000'], credentials: true }))
 //app.use(cors({ origin: ['https://f9040b43e7c8.ngrok-free.app'], credentials: true }))
+app.use(cors({ origin: ['https://books-auth2-frontend-2.vercel.app'], credentials: true }))
+
 
 
 //import Product from "./models/book.model.js"//.js is Mandatory 
