@@ -24,6 +24,7 @@ export const clerkWebHook = async (req, res) => {
     
       const wh = new Webhook(WEBHOOK_SECRET);
       let evt;
+      
       try {
         evt = wh.verify(payload, headers);
       } catch (err) {

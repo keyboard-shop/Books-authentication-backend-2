@@ -23,7 +23,8 @@ export const getProducts = async (req, res) => {
 export const createProduct = async (req, res) => {
     const product = req.body; // User will send this data or from Postman
 
-    if (!product.title || !product.price || !product.image || !product.author) {
+     //if (!product.title || !product.price || !product.image || !product.author) { //<== ORIGINAL
+        if (!product.title || !product.price || !product.author) {
         return res.status(400).json({ success: false, message: "Please provide all fields" });
     }
 
