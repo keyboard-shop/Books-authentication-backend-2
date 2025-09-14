@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../git-testing-2025"
+		},
+		{
+			"path": "../MERN-testing-preply"
+		},
+		{
+			"path": "../Books-frontend"
+		},
+		{
+			"path": "../Books-backend"
+		},
+		{
+			"path": "../GitHub-cloned-repositories"
+		},
+		{
+			"path": "../Books-authentication-frontend"
+		},
+		{
+			"path": "."
+		}
+	]
+}

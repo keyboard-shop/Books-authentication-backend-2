@@ -1,7 +1,7 @@
 
 
 // SERVER SERVER SERVER SERVER SERVER SERVER SERVER SERVER SERVER SERVER SERVER SERVER
-
+// for Cloudinary problem files upload https://community.postman.com/t/cant-select-file-at-form-data-make-sure-that-postman-can-read-files-inside-the-working-directory/16440
 
 import express from "express"
 import dotenv from "dotenv"//for .env dotenv.config()
@@ -10,12 +10,24 @@ import productRoutes from "./routes/product.routes.js"
 import cors from 'cors'
 import { clerkMiddleware, requireAuth } from "@clerk/express";
 
+
+//import ImageModel from "./models/image.model.js"
+//import multer from 'multer';//for files/images handling Cloudinary/MongoDB
+
 import webhookRouter from "./routes/webhook.route.js"
+
+//import UsersSchema from "./models/usersSchema.model.js"
 
 
 const app = express()
 dotenv.config()// for .env ==> process.env.PORT
+//app.use(cors())
 
+//app.use(cors()); 
+
+//console.log('Current working directory:', process.cwd());
+console.log('Current working directory: ===> ', process.cwd());
+//console.log(process.cwd());
 
 
 app.use(clerkMiddleware());
@@ -25,7 +37,6 @@ app.use(clerkMiddleware());
 app.use("/webhooks", webhookRouter);//must be above app.use(express.json())
 
 app.use(express.json())// allows us to accept JSON data in the req.body
-
 
 
 
@@ -64,12 +75,6 @@ app.use(cors({ origin: ['https://books-auth2-frontend-2.vercel.app'], credential
 
 
 
-//import Product from "./models/book.model.js"//.js is Mandatory 
-//import Book from "./models/book.model.js"//.js is Mandatory 
-
-
-
-
 // TESTING start =======================================================
 // for testing, will be displayed in the TERMINAL below
 // app.listen(4000, () => {
@@ -82,22 +87,17 @@ app.get("/", async (req, res) => {
 })
 // for testing, will be displayed in the TERMINAL below
 app.listen(process.env.PORT, () => {
-    console.log(`OK ${process.env.PORT} Backend server is running !!!`);
+    console.log(`OK ${process.env.PORT} Backend server is running 88877777tttttttttttttttt !!!`);
 });
 // TESTING end =========================================================
 
 
 
-
-
 // Product routes
 app.use('/api/products', productRoutes);// for routes -> product.routes.js
-
-
 // for Clerk webhook 
 // to routes => webhook.route.js
 // app.use("/webhooks", webhookRouter);
-
 
 
 
@@ -106,7 +106,7 @@ app.use('/api/products', productRoutes);// for routes -> product.routes.js
 // for MongoDB connection, it works
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
-        console.log('OK MongoDB Atlas has been successfully connected !!!')
+        console.log('OK MongoDB Atlas has been successfully connected 444444 !!!')
     })
     .catch((err) => {
         console.log('NOT CONNECTED to MongoDB', err)
@@ -148,3 +148,8 @@ mongoose.connect(process.env.MONGO_URI)
     // });
     // THIS WORKS end ====================================================
 // PRODUCTION end =====================================================================================
+
+
+
+
+
